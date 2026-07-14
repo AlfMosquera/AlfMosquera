@@ -1,7 +1,7 @@
 # Hola 👋, Soy Omar Mosquera Soria
 
-Desarrollador en crecimiento de Ecuador  
-Me apasiona crear aplicaciones web y móviles, y aprender nuevas tecnologías.
+Ingenierio en Sistemas - Universidad de Guayaquil 
+Me apasiona aprender nuevas tecnologías.
 
 ---
 
@@ -12,7 +12,7 @@ Me apasiona crear aplicaciones web y móviles, y aprender nuevas tecnologías.
 ---
 
 ### 🛠️ Lenguajes y Herramientas
-`Ionic` · `Java` · `JavaScript` · `MySQL` · `Node.js` · `PostgreSQL` · `Python` · `Oracle`
+`Ionic` · `Java` · `JavaScript` · `MySQL` · `Node.js` · `PostgreSQL` · `Python` · `Oracle` · `Linux` · `PL/SQL`
 
 ---
 

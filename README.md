@@ -1,6 +1,7 @@
 # Hola 👋, Soy Omar Mosquera Soria
 
 Ingenierio en Sistemas - Universidad de Guayaquil 
+
 Me apasiona aprender nuevas tecnologías.
 
 ---

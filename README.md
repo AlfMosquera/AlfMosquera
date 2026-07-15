@@ -32,4 +32,3 @@ Apasionado por el aprendizaje continuo, el desarrollo de software y la exploraci
 ---
 
 *"Siempre aprendiendo y construyendo soluciones que marquen la diferencia."* 🚀
-```

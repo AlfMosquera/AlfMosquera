@@ -15,6 +15,7 @@ Apasionado por el aprendizaje continuo, el desarrollo de software y la exploraci
 
 - 📧 **Correo:** omar_mosq@hotmail.com
 - 💼 **LinkedIn:** https://www.linkedin.com/in/alfmosquera
+- 👋 **Portafolio:** https://alfmosquera.github.io/AlfMosquera/
 
 ## 🛠️ Tecnologías y Herramientas
 

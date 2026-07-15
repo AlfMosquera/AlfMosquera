@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio · Omar Mosquera</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!--MENU-->
+    <div class="contenedor-header" id="headerPrincipal">
+        <header>
+            <div class="logo">
+                <a href="#inicio" onclick="seleccionar()">Omar Mosquera</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" data-nav="inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" data-nav="sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" data-nav="skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" data-nav="curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" data-nav="portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                    <!-- <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li> -->
+                </ul>
+            </nav>
+            <div class="nav-responsive" id="botonMenu" onclick="mostrarOcultarMenu()" aria-label="Abrir menú" role="button" tabindex="0">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!--seccion inicio-->
+    <section id="inicio" class="inicio">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="hero-grid">
+            <div class="hero-texto reveal">
+                <span class="kicker">Portafolio profesional</span>
+                <h1>Omar Mosquera</h1>
+                <h2>Ingeniero en Sistemas de Información</h2>
+
+                <div class="terminal" aria-hidden="true">
+                    <div class="terminal-barra">
+                        <span class="punto punto-rojo"></span>
+                        <span class="punto punto-amarillo"></span>
+                        <span class="punto punto-verde"></span>
+                        <span class="terminal-titulo">perfil.sh</span>
+                    </div>
+                    <div class="terminal-cuerpo">
+                        <span class="terminal-prompt">alf@portfolio:~$</span>
+                        <span id="terminalTexto" class="terminal-texto"></span><span class="terminal-cursor"></span>
+                    </div>
+                </div>
+
+                <div class="redes">
+                    <a href="https://github.com/AlfMosquera" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://discordapp.com/users/hika2307" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.linkedin.com/in/alfmosquera" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="assets/cv.pdf" download="Omar_Mosquera_CV.pdf" class="boton boton-primario">
+                        Descargar CV <i class="fa-solid fa-download"></i>
+                    </a>
+                    <a href="#portfolio" onclick="seleccionar()" class="boton boton-secundario">
+                        Ver Proyectos <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal">
+                <div class="anillo-foto">
+                    <img src="imagen/me.png" alt="Foto de Omar Mosquera">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- seccion sobre mi -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <span class="kicker reveal">Conóceme</span>
+            <h2 class="reveal">Sobre Mi</h2>
+            <p class="reveal"><span>Me llamo Omar Mosquera.</span> Me considero una persona que se adapta con naturalidad a los distintos ritmos y desafíos del entorno laboral. En mi día a día, aplico un enfoque analítico porque creo firmemente que las mejores decisiones se apoyan en datos objetivos. Esta combinación de rigor y trabajo colaborativo me permite ofrecer un valor sólido y consistente en cada etapa de los programas que llevamos adelante, asegurándome de que cada paso esté alineado con las metas que nos trazamos.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col reveal">
+                    <h3>Datos Personales</h3>
+                    <ul class="lista-datos">
+                        <li>
+                            <i class="fa-solid fa-cake-candles"></i>
+                            <div>
+                                <strong>Fecha nacimiento</strong>
+                                <span>24-07-2003</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <span>098 193 3983</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>omar_mosq@hotmail.com</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Dirección</strong>
+                                <span>Kennedy Nueva, Guayaquil</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- intereses -->
+                <div class="col reveal">
+                    <h3>Intereses</h3>
+                    <p class="pista-interaccion"><i class="fa-solid fa-hand-pointer"></i> Toca o pasa el cursor para más info</p>
+                    <div class="contenedor-intereses">
+                        <div class="interes" tabindex="0">
+                            <div class="interes-interior">
+                                <div class="interes-cara interes-frente">
+                                    <i class="fa-solid fa-music"></i>
+                                    <span>MÚSICA</span>
+                                </div>
+                                <div class="interes-cara interes-reverso">
+                                    <p>Me gusta escuchar todo tipo de música y sé tocar varios instrumentos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interes" tabindex="0">
+                            <div class="interes-interior">
+                                <div class="interes-cara interes-frente">
+                                    <i class="fa-solid fa-dumbbell"></i>
+                                    <span>GYM</span>
+                                </div>
+                                <div class="interes-cara interes-reverso">
+                                    <p>Me gusta mantener mi cuerpo y mente sanas y fuertes por igual.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interes" tabindex="0">
+                            <div class="interes-interior">
+                                <div class="interes-cara interes-frente">
+                                    <i class="fa-solid fa-plane"></i>
+                                    <span>VIAJAR</span>
+                                </div>
+                                <div class="interes-cara interes-reverso">
+                                    <p>Me gusta conocer tanto como pueda el país.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="contenido-seccion">
+            <span class="kicker reveal">Lo que aporto</span>
+            <h2 class="reveal">Skills</h2>
+            <div class="fila">
+                <!-- skills tecnicas -->
+                <div class="col reveal">
+                    <h3>Technical Skills</h3>
+
+                    <div class="skill" data-progreso="55">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-brands fa-square-js"></i> Javascript</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+
+                    <div class="skill" data-progreso="75">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-brands fa-html5"></i> HTML y CSS</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+
+                    <div class="skill" data-progreso="80">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+
+                    <div class="skill" data-progreso="40">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-brands fa-git-alt"></i> Git</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+
+                    <div class="skill" data-progreso="70">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-solid fa-server"></i> Administración de Bases de Datos</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+
+                    <div class="skill" data-progreso="65">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-solid fa-database"></i> Oracle Database</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+
+                    <div class="skill" data-progreso="60">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-brands fa-linux"></i> Linux</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+
+                    <div class="skill" data-progreso="75">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-solid fa-code"></i> PL/SQL</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+                </div>
+                <!-- Skills profesionales -->
+                <div class="col reveal">
+                    <h3>Competencias</h3>
+
+                    <div class="skill" data-progreso="100">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-solid fa-people-group"></i> Trabajo en equipo centrado en objetivos</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+
+                    <div class="skill" data-progreso="100">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-solid fa-shield-heart"></i> Tolerancia a la presión</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+
+                    <div class="skill" data-progreso="100">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-solid fa-brain"></i> Pensamiento analítico</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+
+                    <div class="skill" data-progreso="100">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-solid fa-bolt"></i> Productividad</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+
+                    <div class="skill" data-progreso="100">
+                        <div class="skill-encabezado">
+                            <span class="skill-nombre"><i class="fa-solid fa-lightbulb"></i> Creatividad</span>
+                            <span class="skill-valor">0%</span>
+                        </div>
+                        <div class="barra-skill"><div class="progreso"></div></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- seccion curriculum -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <span class="kicker reveal">Trayectoria</span>
+            <h2 class="reveal">Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda reveal">
+                    <h3>Educacion</h3>
+                    <div class="item izq">
+                        <h4>Universidad</h4>
+                        <span class="casa">Universidad de Guayaquil</span>
+                        <span class="fecha">2021 - Actualmente</span>
+                        <p>Ingeniería en sistemas de información, estudiante de décimo semestre</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>BGU</h4>
+                        <span class="casa">Unidad educativa Padre Marcos Benetazzo, Babahoyo</span>
+                        <span class="fecha">2015 - 2021</span>
+                        <p>Bachillerato Técnico en Instalaciones Electricas Domesticas</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col derecha reveal">
+                    <h3>Proyectos académicos</h3>
+                    <!-- agregar proyectos -->
+                    <div class="item der item-vacio">
+                        <div class="icono-vacio"><i class="fa-solid fa-folder-plus"></i></div>
+                        <h4>Espacio disponible</h4>
+                        <p>Aquí se agregarán los próximos proyectos académicos.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <!-- agregar proyectos -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portafolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <span class="kicker reveal">Trabajo realizado</span>
+            <h2 class="reveal">PORTAFOLIO</h2>
+            <div class="galeria">
+                <!-- agregar proyecto -->
+                <div class="proyecto proyecto-vacio reveal">
+                    <div class="icono-vacio"><i class="fa-solid fa-code-branch"></i></div>
+                    <h3>Próximos proyectos</h3>
+                    <p>Nuevos trabajos se agregarán pronto.</p>
+                </div>
+                <!-- agregar proyecto -->
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <a href="#inicio" class="arriba" onclick="seleccionar()">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://github.com/AlfMosquera" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+            <a href="https://discordapp.com/users/hika2307" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://www.linkedin.com/in/alfmosquera" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p class="footer-nota">&copy; <span id="anioActual"></span> Omar Mosquera</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

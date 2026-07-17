@@ -703,8 +703,16 @@ img{
 }
 .skill-chip i{
     color: var(--azul-600);
-    font-size: 15px;
-    transition: color var(--transicion);
+    background: var(--azul-100);
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: background var(--transicion), color var(--transicion);
 }
 .skill-chip:hover{
     background: var(--azul-600);
@@ -712,6 +720,7 @@ img{
     transform: translateY(-3px);
 }
 .skill-chip:hover i{
+    background: rgba(255,255,255,.2);
     color: var(--blanco);
 }
 
@@ -886,6 +895,7 @@ img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
     display: block;
     transition: transform .5s ease;
 }

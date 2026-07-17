@@ -87,41 +87,6 @@ document.querySelectorAll(".interes").forEach((tarjeta) => {
 });
 
 /* =========================================
-   BARRAS DE SKILLS: ancho + contador animado
-========================================= */
-function animarSkill(elementoSkill){
-    const meta = parseInt(elementoSkill.getAttribute("data-progreso"), 10) || 0;
-    const barra = elementoSkill.querySelector(".progreso");
-    const etiquetaValor = elementoSkill.querySelector(".skill-valor");
-    const duracion = 1400;
-    const inicio = performance.now();
-
-    if(barra){ barra.style.width = meta + "%"; }
-
-    function paso(ahora){
-        const progreso = Math.min((ahora - inicio) / duracion, 1);
-        const valorActual = Math.round(progreso * meta);
-        if(etiquetaValor){ etiquetaValor.textContent = valorActual + "%"; }
-        if(progreso < 1){
-            requestAnimationFrame(paso);
-        }
-    }
-    requestAnimationFrame(paso);
-}
-
-const elementosSkill = document.querySelectorAll(".skill");
-const observerSkills = new IntersectionObserver((entradas) => {
-    entradas.forEach((entrada) => {
-        if(entrada.isIntersecting){
-            animarSkill(entrada.target);
-            observerSkills.unobserve(entrada.target);
-        }
-    });
-}, { threshold: 0.4 });
-
-elementosSkill.forEach((skill) => observerSkills.observe(skill));
-
-/* =========================================
    TERMINAL: efecto de escritura en el hero
 ========================================= */
 const frasesTerminal = [

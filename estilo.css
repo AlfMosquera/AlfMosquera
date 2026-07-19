@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 
-/* =========================================
-   VARIABLES / TOKENS DE DISEÑO
-========================================= */
 :root{
     --azul-950: #0A1E3B;
     --azul-800: #123C73;
@@ -70,9 +67,6 @@ img{
     }
 }
 
-/* =========================================
-   UTILIDADES
-========================================= */
 .kicker{
     display: inline-block;
     font-family: var(--fuente-mono);
@@ -127,9 +121,6 @@ img{
     transform: translateY(-2px);
 }
 
-/* =========================================
-   MENU / HEADER
-========================================= */
 .contenedor-header{
     background: rgba(18, 60, 115, .85);
     backdrop-filter: blur(12px);
@@ -211,9 +202,6 @@ img{
     transform: scale(1.08);
 }
 
-/* =========================================
-   INICIO / HERO
-========================================= */
 .inicio{
     position: relative;
     background: linear-gradient(160deg, var(--azul-950), var(--azul-700) 60%, var(--azul-500));
@@ -400,9 +388,6 @@ img{
     display: block;
 }
 
-/* =========================================
-   SOBRE MI
-========================================= */
 .sobremi{
     background: var(--azul-100);
     color: var(--azul-800);
@@ -552,9 +537,6 @@ img{
     line-height: 1.5;
 }
 
-/* =========================================
-   EXPERIENCIA
-========================================= */
 .experiencia{
     background: var(--fondo-alt);
     color: var(--azul-800);
@@ -655,9 +637,6 @@ img{
     font-size: 11px;
 }
 
-/* =========================================
-   SKILLS
-========================================= */
 .skills{
     background: var(--azul-100);
     color: var(--azul-800);
@@ -724,9 +703,6 @@ img{
     color: var(--blanco);
 }
 
-/* =========================================
-   CURRICULUM
-========================================= */
 .curriculum{
     background: var(--fondo-alt);
     color: var(--azul-800);
@@ -740,37 +716,20 @@ img{
     font-size: 42px;
     margin-bottom: 40px;
 }
-.curriculum .fila{
+.curriculum .fila-curriculum{
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-.curriculum .fila .col{
-    width: 49%;
-}
-.curriculum .fila .col h3{
-    font-size: 22px;
-    margin-bottom: 25px;
-}
-.curriculum .fila .izquierda{
-    border-right: 2px solid var(--gris-300);
-    padding-right: 30px;
-}
-.curriculum .fila .derecha{
-    border-left: 2px solid var(--gris-300);
-    padding-left: 30px;
-}
-.curriculum .fila-sola{
     justify-content: center;
 }
-.curriculum .fila .col.sola{
+.curriculum .fila-curriculum .col{
     width: 100%;
     max-width: 640px;
-    border-right: none;
-    padding-right: 0;
-    margin: 0 auto;
 }
-.curriculum .fila .item{
+.curriculum .fila-curriculum .col h3{
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.curriculum .fila-curriculum .item{
     padding: 24px;
     margin-bottom: 24px;
     background: var(--blanco);
@@ -778,17 +737,17 @@ img{
     box-shadow: var(--sombra);
     position: relative;
 }
-.curriculum .fila .item h4{
+.curriculum .fila-curriculum .item h4{
     font-size: 18px;
     margin-bottom: 8px;
 }
-.curriculum .fila .item .casa{
+.curriculum .fila-curriculum .item .casa{
     color: var(--azul-700);
     font-size: 17px;
     font-weight: 700;
     display: block;
 }
-.curriculum .fila .item .fecha{
+.curriculum .fila-curriculum .item .fecha{
     display: inline-block;
     font-family: var(--fuente-mono);
     font-size: 12px;
@@ -798,52 +757,12 @@ img{
     border-radius: 50px;
     margin: 6px 0 12px;
 }
-.curriculum .fila .item p{
+.curriculum .fila-curriculum .item p{
     line-height: 1.5;
     font-size: 14px;
     color: var(--gris-900);
 }
-.curriculum .fila .item .conectori{
-    height: 2px;
-    background: var(--gris-300);
-    width: 30px;
-    position: absolute;
-    top: 50%;
-    right: -32px;
-}
-.curriculum .fila .item .conectori .circuloi{
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background: var(--azul-600);
-    position: absolute;
-    right: -5px;
-    top: -4px;
-}
-.curriculum .fila .item .conectord{
-    height: 2px;
-    background: var(--gris-300);
-    width: 30px;
-    position: absolute;
-    top: 50%;
-    left: -32px;
-}
-.curriculum .fila .item .conectord .circulod{
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background: var(--azul-600);
-    position: absolute;
-    left: -5px;
-    top: -4px;
-}
 
-.item-vacio{
-    text-align: center;
-    border: 2px dashed var(--gris-300);
-    background: transparent !important;
-    box-shadow: none !important;
-}
 .icono-vacio{
     width: 52px;
     height: 52px;
@@ -856,16 +775,7 @@ img{
     justify-content: center;
     font-size: 20px;
 }
-.item-vacio h4{
-    margin-bottom: 6px;
-}
-.item-vacio p{
-    color: var(--gris-600) !important;
-}
 
-/* =========================================
-   PORTAFOLIO
-========================================= */
 .portfolio{
     background: var(--azul-100);
     color: var(--azul-800);
@@ -978,9 +888,6 @@ img{
     font-size: 13px;
 }
 
-/* =========================================
-   FOOTER
-========================================= */
 footer{
     background: linear-gradient(135deg, var(--azul-700), var(--azul-500));
     color: var(--blanco);
@@ -1032,9 +939,7 @@ footer .arriba:hover{
     color: rgba(255,255,255,.7);
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+
 @media screen and (max-width:980px){
     nav{
         display: none;
@@ -1119,31 +1024,7 @@ footer .arriba:hover{
         margin-bottom: 30px;
     }
 
-    .curriculum .fila{
-        display: block;
-    }
-    .curriculum .fila .col{
-        width: 100%;
-    }
-    .curriculum .fila .izquierda{
-        border-right: none;
-        border-bottom: 2px solid var(--gris-300);
-        padding-right: 0;
-        padding-bottom: 20px;
-        margin-bottom: 30px;
-    }
-    .curriculum .fila .derecha{
-        border-left: none;
-        padding-left: 0;
-    }
-    .curriculum .fila .item .conectori,
-    .curriculum .fila .item .conectord{
-        display: none;
-    }
-    .curriculum .fila .col.sola{
-        border-bottom: none;
-        padding-bottom: 0;
-        margin-bottom: 0;
+    .curriculum .fila-curriculum .col{
         max-width: 100%;
     }
 

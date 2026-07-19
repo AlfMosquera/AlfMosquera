@@ -1,6 +1,6 @@
 let menuVisible = false;
 
-function mostrarOcultarMenu(){ // ocultar mostrar menu
+function mostrarOcultarMenu(){ 
     const nav = document.getElementById("nav");
     const icono = document.querySelector("#botonMenu i");
     if(menuVisible){
@@ -22,7 +22,6 @@ function seleccionar(){
     menuVisible = false;
 }
 
-// permite activar el menu responsive con teclado (accesibilidad)
 document.getElementById("botonMenu")?.addEventListener("keydown", function(e){
     if(e.key === "Enter" || e.key === " "){
         e.preventDefault();
@@ -30,9 +29,7 @@ document.getElementById("botonMenu")?.addEventListener("keydown", function(e){
     }
 });
 
-/* =========================================
-   SOMBRA DEL HEADER AL HACER SCROLL
-========================================= */
+
 const headerPrincipal = document.getElementById("headerPrincipal");
 function actualizarHeader(){
     if(!headerPrincipal) return;
@@ -43,9 +40,6 @@ function actualizarHeader(){
     }
 }
 
-/* =========================================
-   SCROLLSPY: resalta el link de la seccion visible
-========================================= */
 const seccionesNav = document.querySelectorAll("section[id], div.curriculum[id]");
 const enlacesNav = document.querySelectorAll("#nav a[data-nav]");
 
@@ -62,9 +56,6 @@ const observerNav = new IntersectionObserver((entradas) => {
 
 seccionesNav.forEach((seccion) => observerNav.observe(seccion));
 
-/* =========================================
-   REVELADO DE ELEMENTOS AL HACER SCROLL
-========================================= */
 const elementosReveal = document.querySelectorAll(".reveal");
 const observerReveal = new IntersectionObserver((entradas) => {
     entradas.forEach((entrada) => {
@@ -77,18 +68,12 @@ const observerReveal = new IntersectionObserver((entradas) => {
 
 elementosReveal.forEach((el) => observerReveal.observe(el));
 
-/* =========================================
-   TARJETAS DE INTERESES (soporte tactil)
-========================================= */
 document.querySelectorAll(".interes").forEach((tarjeta) => {
     tarjeta.addEventListener("click", () => {
         tarjeta.classList.toggle("girado");
     });
 });
 
-/* =========================================
-   TERMINAL: efecto de escritura en el hero
-========================================= */
 const frasesTerminal = [
     "Ingeniero en Sistemas de Información",
     "Administrador de Bases de Datos",
@@ -127,15 +112,10 @@ function efectoEscritura(elemento, frases){
 
 efectoEscritura(document.getElementById("terminalTexto"), frasesTerminal);
 
-/* =========================================
-   AÑO ACTUAL EN EL FOOTER
-========================================= */
 const anioActual = document.getElementById("anioActual");
 if(anioActual){ anioActual.textContent = new Date().getFullYear(); }
 
-/* =========================================
-   SCROLL GENERAL
-========================================= */
+
 window.onscroll = function(){
     actualizarHeader();
 };

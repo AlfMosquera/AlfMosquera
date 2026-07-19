@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio · Omar Mosquera</title>
-    <link rel="stylesheet" href="estilo.css?v=3">
+    <link rel="stylesheet" href="estilo.css?v=4">
 </head>
 <body>
     <!--MENU-->
@@ -74,7 +74,7 @@
 
             <div class="hero-visual reveal">
                 <div class="anillo-foto">
-                    <img src="imagen/Foto cv.jpg" alt="Foto de Omar Mosquera">
+                    <img src="imagen/me.png" alt="Foto de Omar Mosquera">
                 </div>
             </div>
         </div>
@@ -250,20 +250,20 @@
         <div class="contenido-seccion">
             <span class="kicker reveal">Trayectoria</span>
             <h2 class="reveal">Curriculum</h2>
-            <div class="fila fila-sola">
-                <div class="col izquierda sola reveal">
+            <div class="fila fila-curriculum">
+                <div class="col reveal">
                     <h3>Educacion</h3>
-                    <div class="item izq">
+                    <div class="item">
                         <h4>Universidad</h4>
                         <span class="casa">Universidad de Guayaquil</span>
                         <span class="fecha">2021 - Actualmente</span>
                         <p>Ingeniería en sistemas de información, estudiante de décimo semestre</p>
                     </div>
-                    <div class="item izq">
-                        <h4>Bachillerato</h4>
-                        <span class="casa">Unidad educativa Particular - Padre Marcos Benetazzo, Babahoyo</span>
+                    <div class="item">
+                        <h4>BGU</h4>
+                        <span class="casa">Unidad educativa Teniente Hugo Ortiz, Guayaquil</span>
                         <span class="fecha">2015 - 2021</span>
-                        <p>Bachillerato Técnico en Instalaciones Eléctricas</p>
+                        <p>BGU (Bachillerato General Unificado)</p>
                     </div>
 
                 </div>
@@ -279,7 +279,7 @@
                 <!-- proyecto: BiblioJava -->
                 <a href="https://github.com/AlfMosquera/BiblioJava" class="proyecto reveal" target="_blank" rel="noopener">
                     <div class="proyecto-imagen">
-                        <img src="imagen/Pantalla Principal (Datos Cargados).png" alt="Pantalla principal de BiblioJava mostrando el catálogo de libros">
+                        <img src="imagen/bibliojava.png" alt="Pantalla principal de BiblioJava mostrando el catálogo de libros">
                     </div>
                     <div class="proyecto-info">
                         <h3>📚 BiblioJava</h3>
@@ -296,6 +296,23 @@
                         <span class="proyecto-enlace">Ver repositorio <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                     </div>
                 </a>
+                <!-- proyecto: Torre de Hanoi -->
+                <a href="https://github.com/AlfMosquera/TorreHanoi" class="proyecto reveal" target="_blank" rel="noopener">
+                    <div class="proyecto-imagen">
+                        <img src="imagen/torrehanoi.png" alt="Interfaz gráfica del juego Torre de Hanoi con discos y torres">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>🗼 Torre de Hanoi</h3>
+                        <p>Clásico rompecabezas de la Torre de Hanói en Java, con interfaz gráfica en Swing, juego manual, animaciones y resolución automática mediante recursión.</p>
+                        <div class="proyecto-tags">
+                            <span>Java 17</span>
+                            <span>Swing</span>
+                            <span>Maven</span>
+                            <span>Concurrencia</span>
+                        </div>
+                        <span class="proyecto-enlace">Ver repositorio <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                </a>
                 <!-- agregar proyecto -->
                 <div class="proyecto proyecto-vacio reveal">
                     <div class="icono-vacio"><i class="fa-solid fa-code-branch"></i></div>
@@ -307,49 +324,6 @@
 
         </div>
     </section>
-
-    <!-- seccion contactos -->
-    <!-- <section id="contacto" class="contacto">
-        <div class="contenido-seccion">
-            <h2>CONTACTO</h2>
-            <div class="fila"> -->
-                <!-- Formulario -->
-                <!-- <div class="col">
-                    <input type="text" placeholder="Tú Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
-                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </div> -->
-                <!-- Mapa -->
-                <!-- <div class="col">
-                    <img src="img/ubicacion.png" alt="">
-                    <div class="info">
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-location-dot"></i>
-                                Nicaragua 159, San Rafael Mza
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                Llamanos: 2384 - 4343443
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-envelope"></i>
-                                Email: cw@example.com
-                            </li>
-                        </ul>
-                    </div>
-                </div> -->
-            <!-- </div>
-        </div>
-    </section> -->
-
-    <!-- footer -->
     <footer>
         <a href="#inicio" class="arriba" onclick="seleccionar()">
             <i class="fa-solid fa-angles-up"></i>
@@ -361,6 +335,9 @@
         </div>
         <p class="footer-nota">&copy; <span id="anioActual"></span> Omar Mosquera</p>
     </footer>
+    <script src="script.js?v=4"></script>
+</body>
+</html>
     <script src="script.js?v=3"></script>
 </body>
 </html>
